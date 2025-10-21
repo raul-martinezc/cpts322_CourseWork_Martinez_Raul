@@ -1,0 +1,17 @@
+STATES: s0 s1 s2 s3 s4
+INPUT_ALPHABET: a b
+TAPE_ALPHABET: a b X Y -
+TRANSITION_FUNCTION:
+s0 a s1 X R
+s0 Y s3 Y R
+s1 a s1 a R
+s1 b s2 Y L
+s1 Y s1 Y R
+s2 a s2 a L
+s2 X s0 X R
+s2 Y s2 Y L
+s3 Y s3 Y R
+s3 - s4 - R
+INITIAL_STATE: s0
+BLANK_CHARACTER: -
+FINAL_STATES: s4
